@@ -2,7 +2,6 @@
 
 1. Download zipped folder containing all files in this repository.
 2. Unzip folder and store in local directory of your choosing.
-3. In a terminal window, navigate to the local directory containing docker-compose.yml.
-4. Run the command `docker compose up`. The Docker images will be downloaded to your system and containers will be created accordingly.
-5. Open a web browser window and type `localhost:5050` to open pgAdmin4 GUI to interact with the database.
-6. In a different web browser tab, copy and paste the custom URL provided in the terminal window to access the Jupyter notebook environment to interact with the database
+3. Open a terminal or PowerShell instance and navigate to the directory containing the Dockerfile, and build the image using the command docker build -t pynb_devenv:0.0.2 .. This will create a new tag (0.0.2) for your existing pynb_devenv image.
+4. Create a Docker container from this image using the command like `docker run -v /Users/scottbruce/Desktop/DockerAssignment:/home/notebooks -p 8888:8888 --name pynb_devcontainer_new pynb_devenv:0.0.2`. You will need to modify the local file path for the Docker volume specification to match your local file path.
+5. Grab the URL from the terminal and open the Jupyter notebook instance in a web browser. Open the Jupyter notebook and select the Restart and run all cells option.
