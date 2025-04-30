@@ -12,8 +12,7 @@ RUN pip install --upgrade pip
 
 RUN pip install numpy==1.26.3  pandas==2.2.0 seaborn==0.13.2 jupyter==1.0.0 scikit-learn==1.4.0 SQLAlchemy==2.0.25 psycopg2==2.9.9 statsmodels==0.14.1 dask[complete]==2024.1.1 graphviz==0.20.1 dask-ml==2023.3.24 plotly==5.18.0
 
-RUN pip install folium==0.19.5
-
+RUN PIP install folium==0.19.5
 
 COPY listings.csv /home/notebooks/
 COPY STAT_315_Final_Project.ipynb /home/notebooks/
