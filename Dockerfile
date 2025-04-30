@@ -14,7 +14,8 @@ RUN pip install numpy==1.26.3  pandas==2.2.0 seaborn==0.13.2 jupyter==1.0.0 scik
 
 RUN pip install folium==0.19.5
 
-COPY AustinAirbnbData.csv /home/notebooks/
+
+COPY listings.csv /home/notebooks/
 COPY STAT_315_Final_Project.ipynb /home/notebooks/
 
 WORKDIR /home/notebooks/
